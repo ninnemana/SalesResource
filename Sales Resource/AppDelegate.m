@@ -5,7 +5,7 @@
 //  Created by Alex Ninneman on 12/10/12.
 //  Copyright (c) 2012 CURT Manufacturing. All rights reserved.
 //
-
+#import <RestKit/RestKit.h>
 #import "AppDelegate.h"
 
 #import "FirstViewController.h"

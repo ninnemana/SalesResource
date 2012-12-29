@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		124CEB96168E91620021F0D6 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 124CEB95168E91620021F0D6 /* SSKeychain.m */; };
 		129B48DD1676E1F90079ECD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129B48DC1676E1F90079ECD2 /* UIKit.framework */; };
 		129B48DF1676E1F90079ECD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129B48DE1676E1F90079ECD2 /* Foundation.framework */; };
 		129B48E11676E1F90079ECD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129B48E01676E1F90079ECD2 /* CoreGraphics.framework */; };
@@ -32,6 +33,13 @@
 		129B492D1676E6250079ECD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129B49261676E6250079ECD2 /* QuartzCore.framework */; };
 		129B492E1676E6250079ECD2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129B49271676E6250079ECD2 /* Security.framework */; };
 		129B492F1676E6250079ECD2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129B49281676E6250079ECD2 /* SystemConfiguration.framework */; };
+		12B5146416867A6A00F55B48 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B5146216867A6A00F55B48 /* LoginViewController.m */; };
+		12B5146516867A6A00F55B48 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12B5146316867A6A00F55B48 /* LoginViewController.xib */; };
+		12B5146816867ADF00F55B48 /* LoginOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B5146716867ADF00F55B48 /* LoginOperation.m */; };
+		12B5146E168CF54200F55B48 /* UserLoginOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B5146D168CF54200F55B48 /* UserLoginOperation.m */; };
+		12B51471168DFD1B00F55B48 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B51470168DFD1B00F55B48 /* Customer.m */; };
+		12B51474168E003D00F55B48 /* SalesAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B51473168E003D00F55B48 /* SalesAuthentication.m */; };
+		12B51476168E0FAB00F55B48 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B51475168E0FAB00F55B48 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		124CEB94168E91620021F0D6 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		124CEB95168E91620021F0D6 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		129B48D81676E1F90079ECD2 /* Sales Resource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sales Resource.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		129B48DC1676E1F90079ECD2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		129B48DE1676E1F90079ECD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,6 +114,18 @@
 		129B49261676E6250079ECD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		129B49271676E6250079ECD2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		129B49281676E6250079ECD2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		12B5146116867A6A00F55B48 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		12B5146216867A6A00F55B48 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		12B5146316867A6A00F55B48 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		12B5146616867ADF00F55B48 /* LoginOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOperation.h; sourceTree = "<group>"; };
+		12B5146716867ADF00F55B48 /* LoginOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginOperation.m; sourceTree = "<group>"; };
+		12B5146C168CF54200F55B48 /* UserLoginOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginOperation.h; sourceTree = "<group>"; };
+		12B5146D168CF54200F55B48 /* UserLoginOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginOperation.m; sourceTree = "<group>"; };
+		12B5146F168DFD1B00F55B48 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		12B51470168DFD1B00F55B48 /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		12B51472168E003D00F55B48 /* SalesAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesAuthentication.h; sourceTree = "<group>"; };
+		12B51473168E003D00F55B48 /* SalesAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesAuthentication.m; sourceTree = "<group>"; };
+		12B51475168E0FAB00F55B48 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12B51476168E0FAB00F55B48 /* libsqlite3.0.dylib in Frameworks */,
 				129B49291676E6250079ECD2 /* CFNetwork.framework in Frameworks */,
 				129B492A1676E6250079ECD2 /* CoreData.framework in Frameworks */,
 				129B492B1676E6250079ECD2 /* libxml2.dylib in Frameworks */,
@@ -131,6 +154,7 @@
 		129B48CD1676E1F90079ECD2 = {
 			isa = PBXGroup;
 			children = (
+				12B51475168E0FAB00F55B48 /* libsqlite3.0.dylib */,
 				129B49221676E6250079ECD2 /* CFNetwork.framework */,
 				129B49231676E6250079ECD2 /* CoreData.framework */,
 				129B49241676E6250079ECD2 /* libxml2.dylib */,
@@ -166,8 +190,21 @@
 		129B48E21676E1F90079ECD2 /* Sales Resource */ = {
 			isa = PBXGroup;
 			children = (
+				124CEB94168E91620021F0D6 /* SSKeychain.h */,
+				124CEB95168E91620021F0D6 /* SSKeychain.m */,
 				129B48EB1676E1F90079ECD2 /* AppDelegate.h */,
 				129B48EC1676E1F90079ECD2 /* AppDelegate.m */,
+				12B5146116867A6A00F55B48 /* LoginViewController.h */,
+				12B5146216867A6A00F55B48 /* LoginViewController.m */,
+				12B5146316867A6A00F55B48 /* LoginViewController.xib */,
+				12B5146616867ADF00F55B48 /* LoginOperation.h */,
+				12B5146716867ADF00F55B48 /* LoginOperation.m */,
+				12B5146F168DFD1B00F55B48 /* Customer.h */,
+				12B51470168DFD1B00F55B48 /* Customer.m */,
+				12B51472168E003D00F55B48 /* SalesAuthentication.h */,
+				12B51473168E003D00F55B48 /* SalesAuthentication.m */,
+				12B5146C168CF54200F55B48 /* UserLoginOperation.h */,
+				12B5146D168CF54200F55B48 /* UserLoginOperation.m */,
 				129B48F41676E1F90079ECD2 /* FirstViewController.h */,
 				129B48F51676E1F90079ECD2 /* FirstViewController.m */,
 				129B48F71676E1F90079ECD2 /* first.png */,
@@ -307,6 +344,7 @@
 				129B49011676E1F90079ECD2 /* second@2x.png in Resources */,
 				129B49041676E1F90079ECD2 /* FirstViewController.xib in Resources */,
 				129B49071676E1F90079ECD2 /* SecondViewController.xib in Resources */,
+				12B5146516867A6A00F55B48 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +359,12 @@
 				129B48ED1676E1F90079ECD2 /* AppDelegate.m in Sources */,
 				129B48F61676E1F90079ECD2 /* FirstViewController.m in Sources */,
 				129B48FD1676E1F90079ECD2 /* SecondViewController.m in Sources */,
+				12B5146416867A6A00F55B48 /* LoginViewController.m in Sources */,
+				12B5146816867ADF00F55B48 /* LoginOperation.m in Sources */,
+				12B5146E168CF54200F55B48 /* UserLoginOperation.m in Sources */,
+				12B51471168DFD1B00F55B48 /* Customer.m in Sources */,
+				12B51474168E003D00F55B48 /* SalesAuthentication.m in Sources */,
+				124CEB96168E91620021F0D6 /* SSKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +466,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -438,6 +483,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -461,6 +507,7 @@
 				129B490C1676E1F90079ECD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,30 +8,81 @@
 #import <RestKit/RestKit.h>
 #import "AppDelegate.h"
 
+#import "LoginViewController.h"
+#import "UserLoginOperation.h"
 #import "FirstViewController.h"
-
 #import "SecondViewController.h"
+#import "SalesAuthentication.h"
 
 @implementation AppDelegate
 
-- (void)dealloc
-{
-    [_window release];
-    [_tabBarController release];
-    [super dealloc];
-}
+
+@synthesize window=_window;
+@synthesize loginViewController=_loginViewController;
+@synthesize tabBarController=_tabBarController;
+@synthesize firstViewController=_firstViewController;
+@synthesize secondViewController=_secondViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+    NSString *loginViewNib = [info objectForKey:@"Login nib file base name"];
+    self.loginViewController = [[[LoginViewController alloc] initWithNibName:loginViewNib bundle:nil] autorelease];
+    self.loginViewController.delegate = self;
+    self.loginViewController.loginOperation = [[[UserLoginOperation alloc]init]autorelease];
+    
+
+    
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    UIViewController *viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
-    UIViewController *viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil] autorelease];
+    UIViewController *view1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
+    UIViewController *view2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil] autorelease];
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
-    self.window.rootViewController = self.tabBarController;
+    self.tabBarController.viewControllers = @[view1, view2];
+
+    [self.window addSubview:self.tabBarController.view];
     [self.window makeKeyAndVisible];
+    
+    if([SalesAuthentication getPassword] != nil){
+        self.window.rootViewController = self.tabBarController;
+    }else{ // Push login
+        [self.loginViewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+        [self.tabBarController presentViewController:self.loginViewController animated:NO completion:nil];
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     return YES;
+}
+
+// Invoked when the user is successfully logged in.
+- (void)loginViewControllerLoggedIn:(LoginViewController *)loginViewController{
+    [self.firstViewController dismissViewControllerAnimated:YES completion:nil];
+    
+    LoginOperation *loginOp = loginViewController.loginOperation;
+    
+    NSLog(@"Logged in. User Name='%@' Password='%@'", loginOp.authenticatedUsername, loginOp.authenticatedPassword);
+    
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    UIViewController *view1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
+    UIViewController *view2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil] autorelease];
+    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
+    self.tabBarController.viewControllers = @[view1, view2];
+    
+    
+    [self.window addSubview:self.tabBarController.view];
+    [self.window makeKeyAndVisible];
+    
+    
+//    [loginOp deleteAuthenticatedData];
+    
+    self.loginViewController = nil;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -60,6 +111,14 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (void)dealloc
+{
+    [_window release];
+    [_tabBarController release];
+    [super dealloc];
+}
+
 
 /*
 // Optional UITabBarControllerDelegate method.

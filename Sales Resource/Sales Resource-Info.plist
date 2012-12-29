@@ -38,6 +38,8 @@
 			<false/>
 		</dict>
 	</dict>
+	<key>Login nib file base name</key>
+	<string>LoginViewController</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "SalesAuthentication.h"
 
 @interface FirstViewController ()
 
@@ -21,6 +22,9 @@
         self.title = NSLocalizedString(@"First", @"First");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
+    
+    NSLog(@"Password: %@",[SalesAuthentication getPassword]);
+    
     return self;
 }
 							

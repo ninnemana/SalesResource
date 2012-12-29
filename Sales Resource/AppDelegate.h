@@ -8,11 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import <RestKit/RestKit.h>
+#import "LoginViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@class  FirstViewController;
+@class SecondViewController;
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate, LoginViewControllerDelegate>{
+    
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) UITabBarController *tabBarController;
+@property (nonatomic, retain) LoginViewController   *loginViewController;
+@property (nonatomic, retain) FirstViewController   *firstViewController;
+@property (nonatomic, retain) SecondViewController  *secondViewController;
+@property (strong, nonatomic) UITabBarController    *tabBarController;
+
 
 @end
